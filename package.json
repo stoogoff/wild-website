@@ -1,0 +1,17 @@
+{
+	"name": "wild-rpg",
+	"version": "1.0.0",
+	"description": "Website for the WILD RPG",
+	"main": "index.js",
+	"scripts": {
+		"server": "pushd src; python -m SimpleHTTPServer; popd",
+		"end": "kill $(lsof -ti:8000)",
+		"deploy": "node ./build/publish"
+	},
+	"author": "Stoo Goff",
+	"license": "ISC",
+	"dependencies": {
+		"aws-sdk": "^2.383.0",
+		"s3": "^4.4.0"
+	}
+}
