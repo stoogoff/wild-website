@@ -31,23 +31,63 @@
 </head>
 <body>
 
-<header>
+<nav>
+	<h1>WILD</h1>
+	<a href="https://www.autocratik.com/"><i class="fas fa-globe"></i></a>
 	<a href="https://www.facebook.com/WILDRPG/"><i class="fab fa-facebook-f"></i></a>
 	<a href="https://twitter.com/autocratik"><i class="fab fa-twitter"></i></a>
+</nav>
+
+<header>
+	<h1>WILD</h1>
+	<h2>
+		<span><em>WAKE</em></span>
+		<span><strong>&middot;</strong> <em>INITIATED</em></span>
+		<span><strong>&middot;</strong> <em>LUCID</em></span>
+		<span><strong>&middot;</strong> <em>DREAMING</em></span>
+	</h2>
 </header>
 
-<h1>WILD</h1>
-<h2>
-	<span><em>WAKE</em></span>
-	<span><strong>&middot;</strong> <em>INITIATED</em></span>
-	<span><strong>&middot;</strong> <em>LUCID</em></span>
-	<span><strong>&middot;</strong> <em>DREAMING</em></span>
-</h2>
+<section>
+	<p>The development of the <strong>ALIS</strong> dreamshare device has changed the world.</p>
+	<p>The technology allows dreamers to enter a shared experience, to delve into the unconscious minds of of those in need of help, to create worlds of adventure and exploration, to experience a reality limited only by your imagination.</p>
+	<p>But without the proper training, using the <strong>ALIS</strong> device can be a dangerous and frightening experience.</p>
+	<p>In the <strong>WILD RPG</strong> players enter this world, where technology and dreams meet. Where dream creatures struggle to break into the waking world, and where you can live out your wildest dreams.</p>
+	<p>The <strong>WILD Training Dive Simulation</strong> is an introduction to the <strong>WILD RPG</strong>, sending dreamers on a rescue mission into the unconscious. Connect with other dreamers, or dive alone&mdash;all you need is this book and a pack of Tarot cards.</p>
+</section>
 
 <footer>
 	<p><span>&copy; 2020 David F. Chapman and we evolve</span></p>
 	<p><span>Illustration &copy; 2020, Qistina Khalidah</span></p>
 </footer>
+
+<script>
+
+
+function debounce(fn) {
+	var frame;
+
+	return function() {
+		if(frame) { 
+			cancelAnimationFrame(frame);
+		}
+
+		frame = requestAnimationFrame(() => {
+			fn.apply(arguments);
+		});
+	} 
+}
+
+function storeScroll() {
+  document.documentElement.dataset.scroll = window.scrollY;
+  document.documentElement.className = window.scrollY < 170 ? "start" : "end";
+}
+
+document.addEventListener('scroll', debounce(storeScroll));
+
+storeScroll();
+
+</script>
 
 </body>
 </html>
