@@ -46,7 +46,10 @@ sync.on("end", () => {
 	invalidationPaths = invalidationPaths.map(m => m.substring(1).split("/")).map(m => {
 		let path = "";
 
-		if(m.length == 1) {
+		if(m.length == 1 && m[0] == "index.html") {
+			path = "";
+		}
+		else if(m.length == 1) {
 			path = m[0];
 		}
 		else if(m[m.length - 1] == "index.html") {
