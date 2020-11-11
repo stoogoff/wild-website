@@ -21,6 +21,10 @@ html.start header h1, html.end nav h1 {
 	opacity: 1;
 }
 
+time {
+	font-weight: bold;
+}
+
 h1 {
 	line-height: 100%;
 	transition: all .5s ease-in;
