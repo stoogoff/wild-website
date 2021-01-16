@@ -34,10 +34,11 @@ h1 {
 header {
 	padding: 15rem 0 1rem;
 	display: block;
+	margin-bottom: 3rem;
 }
 
 header h1 {
-	margin: 0 0 5rem;
+	margin: 0;
 	text-align: center;
 	font-size: 120pt;
 }
@@ -46,6 +47,7 @@ h2 {
 	text-align: center;
 	font-weight: normal;
 	line-height: 100%;
+	margin-top: 0;
 }
 
 h2 strong {
