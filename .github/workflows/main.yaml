@@ -23,7 +23,7 @@ jobs:
       run: yarn install && yarn generate
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./dist/ s3://we-evolve.co.uk --delete
+      run: aws s3 sync ./dist/ s3://${{ secrets.AWS_BUCKET }} --delete
 
     - name: Invalidate CloudFront
       uses: chetan/invalidate-cloudfront-action@master
