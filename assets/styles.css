@@ -13,17 +13,15 @@ html, body {
 }
 
 body {
-	font: 10pt/12pt NeutraText;
+	font: 12pt/14pt NeutraText;
 	color: rgb(59,17,64);
 	@apply bg-white bg-no-repeat bg-fixed bg-center bg-cover;
 	background-image: url(/img/cover.jpg);
 }
 
-html.start nav h1, html.end header h1 {
-	opacity: 0;
-}
-html.start header h1, html.end nav h1 {
-	opacity: 1;
+h1 {
+	@apply text-3xl uppercase text-gray-500 text-center;
+	color: rgb(59,17,64);
 }
 
 time {
@@ -34,57 +32,13 @@ img {
 	@apply max-w-full mt-4;
 }
 
-section {
-	box-sizing: border-box;
-	max-width: 42rem;
-	background-color: rgba(255,255,255,0.8);
-	padding: 1.5rem;
-	margin: 0 auto 3em;
-}
-section p, section li {
-	font-size: 1.1rem;
-	line-height: 1.4em;
-}
-section p:first-child {
-	margin-top: 0;
-	font-size: 1.3rem;
-}
-section p:last-child {
-	margin-bottom: 0;
+p {
+	@apply mb-3 leading-6;
 }
 
-nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: 1rem;
-	background-color: rgba(255,255,255,0.8);
-	display: flex;
-	flex-direction: row;
+strong {
+	@apply font-bold;
 }
-nav h1 {
-	margin: 0.4rem 0 0 0;
-	flex-grow: 4;
-}
-nav a {
-	font-size: 1.2rem;
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	padding: 0.2em;
-	margin-left: 0.2em;
-	text-align: center;
-	color: white;
-	transition: all .15s ease-in-out;
-	transition-property: background-color;
-	background-color: rgb(59,17,64);
-}
-nav a:hover {
-	background-color: rgb(194,36,59);
-}
-
-
 
 /* press kit specific */
 #press-kit {

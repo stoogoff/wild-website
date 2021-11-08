@@ -1,5 +1,5 @@
 <template>
-	<header class="mb-12 pt-60 pb-4 block">
+	<header class="mb-12 pt-48 pb-4 block">
 		<h1 class="m-0 text-center">WILD</h1>
 		<h2 class="text-center">
 			<span><em>WAKE</em></span>
@@ -12,9 +12,7 @@
 <script>
 import Vue from 'vue'
 
-export default Vue.component('AnimatedHeader', {
-
-})
+export default Vue.component('AnimatedHeader', {})
 </script>
 <style scoped>
 h1 {
