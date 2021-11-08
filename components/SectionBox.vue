@@ -9,10 +9,10 @@ import Vue from 'vue'
 export default Vue.component('SectionBox', {})
 </script>
 <style scoped>
-p:first-child, .nuxt-content p:first-child {
+p:first-child {
 	@apply mt-0 text-lg;
 }
-p:last-child, .nuxt-content p:last-child {
+p:last-child {
 	@apply mb-0;
 }
 </style>

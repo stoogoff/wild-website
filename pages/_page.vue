@@ -1,5 +1,5 @@
 <template>
-	<div class="mt-24">
+	<div class="pt-24">
 		<section-box>
 			<nuxt-content :document="document" />
 		</section-box>

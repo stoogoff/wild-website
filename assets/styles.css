@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-	@apply text-3xl uppercase text-gray-500 text-center;
+	@apply text-3xl uppercase text-gray-500 text-center font-bold;
 	color: rgb(59,17,64);
 }
 
@@ -32,8 +32,20 @@ img {
 	@apply max-w-full mt-4;
 }
 
+svg {
+	@apply inline-block;
+}
+
 p {
 	@apply mb-3 leading-6;
+}
+
+* p:first-of-type {
+	@apply text-lg;
+}
+
+* p:last-child {
+	@apply mb-0;
 }
 
 strong {

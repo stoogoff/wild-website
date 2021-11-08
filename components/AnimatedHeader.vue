@@ -20,6 +20,7 @@ h1 {
 	transition: all .5s ease-in;
 	transition-property: opacity;
 	font-size: 120pt;
+	color: rgb(59,17,64);
 }
 
 h2 strong {
