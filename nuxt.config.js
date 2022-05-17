@@ -1,5 +1,5 @@
 
-import meta from './utils/meta'
+import { meta, url, title } from './utils/meta'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -14,7 +14,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '%s | WILD',
+    title: title(),
     htmlAttrs: {
       lang: 'en'
     },
@@ -26,6 +26,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { hid: 'canonical', rel: 'canonical', href: url() },
     ]
   },
 
@@ -54,5 +55,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true,
   }
 }

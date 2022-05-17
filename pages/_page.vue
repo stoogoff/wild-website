@@ -6,7 +6,7 @@
 	</div>
 </template>
 <script>
-import meta from '~/utils/meta'
+import { meta, title, url } from '~/utils/meta'
 
 export default {
 	async fetch() {
@@ -26,33 +26,21 @@ export default {
 		}
 	},
 
-	computed: {
-		title() {
-			return this.document ? this.document.title : ''
-		},
-
-		baseUrl() {
-			return this.$nuxt.context.env.baseUrl
-		},
-
-		meta() {
-			if(!this.document) return []
-
-			return meta({
-				type: 'article',
-				title: this.title,
-				description: this.document.summary,
-				url: `/${this.$route.params.page}`,
-			})
-		}
-	},
-
 	head() {
+		if(!this.document) return {}
+
+		const metadata = {
+			type: 'article',
+			title: this.document.title,
+			description: this.document.summary,
+			url: `/${this.$route.params.page}/`,
+		}
+
 		return {
-			title: this.title,
-			meta: this.meta,
+			title: title(metadata),
+			meta: meta(metadata),
 			link: [
-				{ hid: 'canonical', rel: 'canonical', href: `${this.baseUrl}/${this.$route.params.page}` },
+				{ hid: 'canonical', rel: 'canonical', href: url(metadata) },
 			]
 		}
 	},
