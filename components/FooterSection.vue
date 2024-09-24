@@ -4,9 +4,6 @@
 			<a class="block mx-auto md:mx-0" href="https://www.drivethrurpg.com/product/359987/WILD-Dream-Dive-Training-Simulation">
 				<img src="/img/drivethrurpg.png" alt="DriveThruRPG" class="w-56 m-4" />
 			</a>
-			<a class="block mx-auto md:mx-0" href="https://gamefound.com/projects/stoo/wild-dream-dive-training-simulation">
-				<img src="/img/gamefound.svg" alt="GameFound" class="w-56 m-4" />
-			</a>
 		</div>
 		<div class="flex justify-center">
 			<span class="p-2 text-center" v-for="(link, idx) in links" :key="`link_${idx}`">
