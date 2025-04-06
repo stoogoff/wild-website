@@ -27,9 +27,23 @@ resource "bunnynet_pullzone" "cdn" {
 	}
 }
 
+resource "bunnynet_pullzone_hostname" "bunnynet" {
+	pullzone    = bunnynet_pullzone.cdn.id
+	name        = "${local.service_name}.b-cdn.net"
+	tls_enabled = true
+	force_ssl   = true
+}
+
 resource "bunnynet_pullzone_hostname" "webhost" {
 	pullzone    = bunnynet_pullzone.cdn.id
 	name        = "${bunnynet_dns_record.dns.name}.${data.bunnynet_dns_zone.dns.domain}"
+	tls_enabled = true
+	force_ssl   = true
+}
+
+resource "bunnynet_pullzone_hostname" "barehost" {
+	pullzone    = bunnynet_pullzone.cdn.id
+	name        = data.bunnynet_dns_zone.dns.domain
 	tls_enabled = true
 	force_ssl   = true
 }
