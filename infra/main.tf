@@ -27,7 +27,7 @@ resource "bunnynet_pullzone" "cdn" {
 
 resource "bunnynet_pullzone_hostname" "webhost" {
 	pullzone    = bunnynet_pullzone.cdn.id
-	name        = data.bunnynet_dns_zone.dns.domain
+	name        = "${bunnynet_dns_record.dns.name}.${data.bunnynet_dns_zone.dns.domain}"
 	tls_enabled = true
 	force_ssl   = true
 }
