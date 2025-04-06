@@ -7,7 +7,7 @@ resource "bunnynet_pullzone_edgerule" "redirect_bare_domain" {
 	actions = [
 		{
 			type       = "Redirect"
-			parameter1 = "https://${bunnynet_dns_record.dns.name}.${data.bunnynet_dns_zone.dns.domain}"
+			parameter1 = "https://${bunnynet_pullzone_hostname.webhost.name}"
 			parameter2 = "301"
 			parameter3 = null
 		}
@@ -18,7 +18,10 @@ resource "bunnynet_pullzone_edgerule" "redirect_bare_domain" {
 		{
 			type       = "Url"
 			match_type = "MatchAny"
-			patterns   = ["https://${data.bunnynet_dns_zone.dns.domain}/*"]
+			patterns   = [
+				"https://${data.bunnynet_dns_zone.dns.domain}/*",
+				"https://${bunnynet_pullzone_hostname.bunnynet.name}/*"
+			]
 			parameter1 = null
 			parameter2 = null
 		}
